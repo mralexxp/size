@@ -11,7 +11,7 @@ import (
 
 // Of returns the size of 'v' in bytes.
 // If there is an error during calculation, Of returns -1.
-func Of(v interface{}) int {
+func Of(v any) int {
 	// Cache with every visited pointer so we don't count two pointers
 	// to the same memory twice.
 	cache := make(map[uintptr]bool)
